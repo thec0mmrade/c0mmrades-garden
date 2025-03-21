@@ -3,3 +3,4 @@
 ---
 
 Hello World! This is a static site generated with GH and Vercel
+[[Another One\|Another One]]
