@@ -2,5 +2,4 @@
 {"dg-publish":true,"permalink":"/home/","tags":["gardenEntry"]}
 ---
 
-Hello World! This is a static site generated with GH and Vercel
-[[Another One\|Another One]]
+Welcome to c0mmrade's digital garden thing.
