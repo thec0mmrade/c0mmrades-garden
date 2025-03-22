@@ -7,42 +7,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D ASCII Animation</title>
+    <title>3D ASCII Sphere Animation</title>
     <style>
         @keyframes rotate {
-            0% { transform: rotateX(0deg) rotateY(0deg); }
-            100% { transform: rotateX(360deg) rotateY(360deg); }
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
         }
-        .cube {
+        .sphere {
             font-family: monospace;
-            font-size: 20px;
-            line-height: 20px;
+            font-size: 15px;
+            line-height: 15px;
             white-space: pre;
             transform-style: preserve-3d;
             animation: rotate 5s infinite linear;
+            perspective: 1000px;
         }
-        .face {
+        .layer {
             position: absolute;
-            width: 200px;
-            height: 200px;
             backface-visibility: hidden;
         }
-        .face:nth-child(1) { transform: rotateY(0deg) translateZ(100px); }
-        .face:nth-child(2) { transform: rotateY(90deg) translateZ(100px); }
-        .face:nth-child(3) { transform: rotateY(180deg) translateZ(100px); }
-        .face:nth-child(4) { transform: rotateY(270deg) translateZ(100px); }
-        .face:nth-child(5) { transform: rotateX(90deg) translateZ(100px); }
-        .face:nth-child(6) { transform: rotateX(-90deg) translateZ(100px); }
+        .layer:nth-child(1) { transform: translateZ(50px); }
+        .layer:nth-child(2) { transform: translateZ(40px); }
+        .layer:nth-child(3) { transform: translateZ(30px); }
+        .layer:nth-child(4) { transform: translateZ(20px); }
+        .layer:nth-child(5) { transform: translateZ(10px); }
+        .layer:nth-child(6) { transform: translateZ(0px); }
     </style>
 </head>
 <body>
-    <div class="cube">
-        <div class="face">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</div>
-        <div class="face">**********************************************************************</div>
-        <div class="face">######################################################################</div>
-        <div class="face">######################################################################</div>
-        <div class="face">**********************************************************************</div>
-        <div class="face">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</div>
+    <div class="sphere">
+        <div class="layer">..........</div>
+        <div class="layer">......@@......</div>
+        <div class="layer">...@@@@@@@...</div>
+        <div class="layer">..@@@@@@@@@..</div>
+        <div class="layer">.@@@@@@@@@@@.</div>
+        <div class="layer">@@@@@@@@@@@@@</div>
     </div>
 </body>
 </html>
